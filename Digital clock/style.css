@@ -1,0 +1,71 @@
+body {
+    background-image: url(./purple.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Arrange heading and clock vertically */
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 80px;
+    color: #000000;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  
+  h1:hover {
+    border-bottom: 4px dotted  #141010; /* Border appears on hover */
+    padding-bottom: 10px; /* Add some space for the border */
+  
+  }
+  
+  .clock {
+    font-size: 8rem;
+    color: #000000;
+    padding: 30px 50px;
+    border-radius: 40px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+  }
+
+  .clock:hover{
+    padding-bottom: 10px;
+    animation: moveUpDown 0.5s infinite;
+}
+@keyframes moveUpDown {
+ 0%{
+    transform: translateY(0);
+ }
+ 50%{
+    transform: translateY(-10px);
+ }
+ 100%{
+    transform: translateY(0);
+ }
+ 
+}
+
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem; /* Smaller font size for small devices */
+    }
+  
+    .clock {
+      font-size: 3rem; /* Smaller font size for small devices */
+      padding: 15px 30px;
+    }
+  }
